@@ -6,10 +6,10 @@ export default class Routes {
     public route: Router = express.Router();
 
     constructor() {
-        // Route utama
+        // main route
         this.route.get('/', new HomeRoute().get());
 
-        // Route ketika halaman error
+        // error route
         this.route.use(new ErrorRoute().get());
     }
 }

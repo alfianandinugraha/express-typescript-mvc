@@ -9,6 +9,7 @@ class App {
 
     constructor() {
         this.config();
+        this.template();
         this.app.use(new Routes().route);
 
         this.app.listen(this.port, () => {
@@ -18,6 +19,12 @@ class App {
 
     private config() {
         this.app.use(bodyParser.urlencoded({ extended: false }));
+    }
+
+    private template() {
+        const { config, engine } = require('express-edge');
+        this.app.use(engine);
+        this.app.set('views', 'views');
     }
 }
 

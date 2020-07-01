@@ -1,7 +1,8 @@
 import express, { Application } from 'express';
-import Env from '@config/Env';
 import bodyParser from 'body-parser';
-import Routes from './controller/Routes';
+
+import Env from '@config/Env';
+import Routes from '@controller/Routes';
 
 class App {
     private app: Application = express();

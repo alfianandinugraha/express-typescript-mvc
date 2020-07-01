@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 1rem;
+}
+
+.wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+ol {
+    display: flex;
+    margin: 0rem auto;
+    margin-top: .5rem;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    padding: .5rem;
+    color: maroon;
+    display: block;
+}
+
+li a:hover {
+    background-color: maroon;
+    color: white;
+}

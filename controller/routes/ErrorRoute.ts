@@ -3,7 +3,9 @@ import { Request, Response } from 'express';
 export default class ErrorRoute {
     public get() {
         return (req: Request, res: Response) => {
-            res.status(404).send('<h1>Error, 404 Not Found</h1>');
+            res.status(404).render('pages/error', {
+                titlePage: '404 Not Found :('
+            })
         };
     }
 }

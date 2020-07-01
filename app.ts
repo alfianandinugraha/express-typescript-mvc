@@ -23,7 +23,7 @@ class App {
     }
 
     private template() {
-        const { config, engine } = require('express-edge');
+        const { engine } = require('express-edge');
         this.app.use(engine);
         this.app.set('views', 'views');
     }

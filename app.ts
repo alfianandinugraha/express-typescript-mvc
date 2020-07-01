@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import Env from '@config/Env';
 import bodyParser from 'body-parser';
+import Routes from './controller/Routes';
 
 class App {
     private app: Application = express();
@@ -8,6 +9,7 @@ class App {
 
     constructor() {
         this.config();
+        this.app.use(new Routes().route);
 
         this.app.listen(this.port, () => {
             console.log(`server was running at http://localhost:${this.port}`);
